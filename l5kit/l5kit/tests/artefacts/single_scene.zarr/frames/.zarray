@@ -1,0 +1,54 @@
+{
+    "chunks": [
+        10000
+    ],
+    "compressor": {
+        "blocksize": 0,
+        "clevel": 5,
+        "cname": "lz4",
+        "id": "blosc",
+        "shuffle": 1
+    },
+    "dtype": [
+        [
+            "timestamp",
+            "<i8"
+        ],
+        [
+            "agent_index_interval",
+            "<i8",
+            [
+                2
+            ]
+        ],
+        [
+            "traffic_light_faces_index_interval",
+            "<i8",
+            [
+                2
+            ]
+        ],
+        [
+            "ego_translation",
+            "<f8",
+            [
+                3
+            ]
+        ],
+        [
+            "ego_rotation",
+            "<f8",
+            [
+                3,
+                3
+            ]
+        ]
+    ],
+    "fill_value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+    "filters": null,
+    "order": "C",
+    "shape": [
+        248
+    ],
+    "zarr_format": 2
+}
