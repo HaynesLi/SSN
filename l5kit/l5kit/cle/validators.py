@@ -152,9 +152,9 @@ class ValidationCountingAggregator(SupportsValidationAggregation):
             for validator_name, validator_output in validator_dict.items():
                 # Aggregate the number of failed frames in the scene
                 if self.failed_frames:
-                    aggregation[validator_name] += len(validator_output.failed_frames)/100
+                    aggregation[validator_name] += len(validator_output.failed_frames)/5
                 else:  # or the number of scenes
-                    aggregation[validator_name] += (not validator_output.is_valid_scene)/100
+                    aggregation[validator_name] += (not validator_output.is_valid_scene)/5
         aggregation_torch = {k: torch.as_tensor(v) for k, v in aggregation.items()}
         # aggregation_torch = {k: int(v) for k, v in aggregation}
         return aggregation_torch
